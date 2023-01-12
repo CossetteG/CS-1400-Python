@@ -1,0 +1,17 @@
+input= information put in 
+output= information put out 
+
+input:
+print("Hello World")
+
+print("Hello", end='')
+print("World")
+
+output
+Hello World
+
+.py should be the file type for python 
+python is an interpreted language
+
+python shells can be used to run/ test your code
+
