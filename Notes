@@ -1,17 +1,54 @@
 input= information put in 
 output= information put out 
 
-input:
+
+Print
+
 print("Hello World")
 
 print("Hello", end='')
 print("World")
+#prints Hello World as one line
 
-output
-Hello World
+print("Hi ", end='Rose')
+print(", how are you?")
+#prints: Hi Rose, how are you?, separated as /Hi /Rose/, how are you?
 
 .py should be the file type for python 
 python is an interpreted language
 
 python shells can be used to run/ test your code
+
+#This is a one-line comment
+
+'''
+This is a multiple line comment
+The marks are single quotes
+'''
+
+Variables
+variables can be named with letters and _, are case sensitive 
+
+my_variable = "Hello World"
+print(my_variable)
+
+python does not use the var keyword
+
+string_variable = "letters and symbols"
+#strings always have quotes
+
+boolean_variable = True
+print(boolean_variable)
+#booleans are either True or False (must be capitalized)
+
+integer_variable = 50
+#numbers without decimals, if you use comma it will register as a set of numbers
+
+float_variable = 5.05
+#numbers with decimals
+
+my_variable="float",3,9.9,True
+print(my_variable)
+#all variables can be used alongside eachother so long as the function allows it
+
 
