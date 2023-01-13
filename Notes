@@ -137,3 +137,86 @@ print(not True)
 
 #Short Circuting- if Python knows something will be true before finishing, it wont finish 
 
+>>> print("hi"bob")
+  File "<stdin>", line 1
+    print("hi"bob")
+                 ^
+SyntaxError: unterminated string literal (detected at line 1)
+>>> print("hi\"bob")
+hi"bob
+>>>
+The \ will cancel the 1st ", its an escape
+
+>>> print("hi\bob")
+hob
+>>>HAHAHA
+
+anyways 
+use use end=' ' for any special characters
+
+teacher_name = "xi chen"
+
+Use Type Cast to change type of variable 
+
+# Converts a string to an integer
+var1 = int("123")
+var2 = 100
+print(var1 + var2) 
+
+>>> first_name =bool(first_name)
+>>> print(first_name)
+True
+>>>
+
+Input function
+>>> first = input("first name")
+first nameRose
+>>> print(first)
+Rose
+>>>
+#defaults to string 
+
+>>> numone =input()
+6
+>>> numtwo = input()
+3
+>>> numone + numtwo
+'63'
+>>> numone = int(numone)
+>>> numtwo = int(numtwo)
+>>> numone + numtwo
+9
+>>>#typecasting, ie 2
+
+cs + string("1400")
+
+Design:Yondu Udonta
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
