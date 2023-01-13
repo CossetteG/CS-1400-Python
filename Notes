@@ -51,4 +51,89 @@ my_variable="float",3,9.9,True
 print(my_variable)
 #all variables can be used alongside eachother so long as the function allows it
 
+Arithmetic Operators
+a=3
+print(type(a))
+a=str(a)
+print(type(a))
+print(a)
+
+b="3"
+print(a+ int(b))
+
+strings can be added too, just like ints and floats
+int+float=float 
+
+a = 10
+b = True
+c = a - b
+print(c)
+
+output of 9 becuase true registers as 1 and false as 0
+
+a = 25
+b =5.1
+print(a / b)
+print(a//b)
+#always rounds down
+
+a =2
+b ="Hi "
+print (a * b)
+#print(ab) doesnt work
+
+a =4**2
+print(a) 
+#dont exponent a negative number
+square_root =25**.5
+print(square_root) 
+
+PEMDAS
+
+modulo = 5 % 2
+print(modulo)
+
+whole = 63
+divider = 5
+division = 63//5
+remainder = 63 % 5
+print(division)
+print(remainder)
+#negative whole returns negative division, positive remainder
+#negative divider returns both negative 
+
+
+Boolean Operators
+
+a = True
+b = 1
+print(a == b) 
+
+a = 5
+b = 1
+print(a != b)
+
+a = 9
+b = 17
+print(a > b)
+
+a = True
+b = False
+print(a > b)
+
+a=True
+b=True
+c=False
+d=False
+print(a and b)
+print(a and b and c)
+print(a and b and a and b)
+print(a or b)
+print(a or c)
+print(c or d)
+print(a or c or d)
+
+print(not True)
+
+#Short Circuting- if Python knows something will be true before finishing, it wont finish 
 
