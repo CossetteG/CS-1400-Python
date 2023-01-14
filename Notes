@@ -75,6 +75,7 @@ a = 25
 b =5.1
 print(a / b)
 print(a//b)
+floor division^
 #always rounds down
 
 a =2
