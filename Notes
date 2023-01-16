@@ -193,17 +193,70 @@ cs + string("1400")
 
 Design:Yondu Udonta
 
+Strings 
 
+my_string = "Hello"
+length = len(my_string)
+print(length)
+#returns 5
 
+character = my_string[1]
+print(character)
+#string index/ referencing a character
 
+my_string = "Hello!"
+character = my_string[len(my_string)-1]
+character = my_string[-1]
+print(character)
+#you gotta do -1 because character length starts at 1 but character index starts at 0
 
+Strings are immutable- you don't change just part of it you gotta assign the whole thing anew
 
+my_string = "Hello world! This is a very, very long string. \
+Even though this string is on three different lines, it should \
+print as one line. Notice how the line breaks are different."
+print(my_string)
 
+long_string = """Notice how this weird looking
+    string is being
+        printed.
+      WAPPPPP
+    WAAAPPPPP
+  WAAAAAAAAAA"""
+  #also works with single quotes
+print(long_string)
 
+in Operator
 
+my_string = "The brown dog jumps over the lazy fox."
+print("dog" in my_string)
+print(my_string in my_string)
+#return True
 
+slice Operator- includes the first number, excludes the second number 
 
+my_string = "The brown dog jumps over the lazy fox."
+my_slice = my_string[4:9] #brown 
+my_slice = my_string[1:1] #nothing
+print(my_slice)
+print(my_string[0:len(my_string)]) #everything
 
+they count starting at 0
+
+Escape characters
+
+my_string = "Hello\nworld"
+print(my_string)
+#Hello, new line, World 
+
+my_string = "And then she said, \"Hi there.\""
+print(my_string)
+
+\\	Prints a backslash                         	print("\\")
+\’	Prints a single quote                    	print("\'")
+\"	Prints a double quote                   	print("\"")
+\t	Prints a tab (spacing)                   	print("Hello\tworld")
+\uxxxx	Prints a hexidecimal unicode character	print("\u26BE")
 
 
 
