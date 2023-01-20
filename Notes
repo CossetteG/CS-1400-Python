@@ -52,6 +52,17 @@ print(my_variable)
 #all variables can be used alongside eachother so long as the function allows it
 
 Arithmetic Operators
+
+a *= 2
+a /= 2
+a //=2
+a += 2
+a -= 2
+a **=2
+a %= 2
+
+
+
 a=3
 print(type(a))
 a=str(a)
@@ -136,6 +147,8 @@ print(a or c or d)
 
 print(not True)
 
+calculate bools in order of not, and, then or 
+
 #Short Circuting- if Python knows something will be true before finishing, it wont finish 
 
 >>> print("hi"bob")
@@ -206,9 +219,12 @@ print(character)
 
 my_string = "Hello!"
 character = my_string[len(my_string)-1]
-character = my_string[-1]
+character = my_string[-1] 
 print(character)
 #you gotta do -1 because character length starts at 1 but character index starts at 0
+#negative numbers count from the end, positive characters count from the front
+
+Index Error- you're trying to access something that does not exist
 
 Strings are immutable- you don't change just part of it you gotta assign the whole thing anew
 
@@ -296,6 +312,7 @@ print("%s, up and %s" % (var1, var2))
 this way uses % to interpolate and s to type cast. it also works with i, f, but not b
 its the old way dont use it 
 
+select a chunk of code and do Ctrl # to comment it out- yet to test 
 
 
 
