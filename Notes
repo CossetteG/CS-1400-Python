@@ -253,9 +253,12 @@ slice Operator- includes the first number, excludes the second number
 
 my_string = "The brown dog jumps over the lazy fox."
 my_slice = my_string[4:9] #brown 
+#slice length will always equal the difference between the parameters
 my_slice = my_string[1:1] #nothing
 print(my_slice)
 print(my_string[0:len(my_string)]) #everything
+my_slice(0:3:2) 
+#the 2 means step 2- use every other character within the parameters 
 
 they count starting at 0
 
@@ -264,6 +267,9 @@ Escape characters
 my_string = "Hello\nworld"
 print(my_string)
 #Hello, new line, World 
+
+Enter in string \n 
+Tab in string \t 
 
 my_string = "And then she said, \"Hi there.\""
 print(my_string)
@@ -314,9 +320,21 @@ its the old way dont use it
 
 select a chunk of code and do Ctrl # to comment it out- yet to test 
 
+snake casing is all lowercase letters and using _ as a space
 
+syntax is the rules for forming legal statements
+semantics is the meaning associated with the statement 
 
+we can use f"string{var}" to insert anything into a string- most importantly a function/return value
+ 
 
+number = 6.329874
+print(f"number is {number: .2f}")
+(prints the number with 2 decimal places)
+# number is 6.32
+
+PEP 8 recommends that you should limit all lines to >= 79 characters
+DocString
 
 
 
