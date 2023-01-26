@@ -336,8 +336,38 @@ print(f"number is {number: .2f}")
 PEP 8 recommends that you should limit all lines to >= 79 characters
 DocString
 
+if statement
 
+if True:
+    print("Execute if expression is True")
 
+print("Continue execute here)
 
+#four spaces = 1 indentation 
+#new indentation for every block of code 
+#even if you have an error, python will run the code up until the error
 
+checking if something is even:
+num = 1
+if num % 2 == 0:
+    print(f"{num} is even.")
+
+#if num % 2 == 1:
+#    print(f"{num} is odd")
+
+else: 
+    pass 
+
+#else if 
+elif num1 <= 0:
+    print("negative")
+
+if parameter one:
+    action
+elif parameter two: 
+    action
+else: (otherwise)
+    action or pass 
+
+Python will only run 1 if statement, if it runs into a pass it will exit without doing anything
 
