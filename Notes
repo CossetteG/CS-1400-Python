@@ -371,3 +371,80 @@ else: (otherwise)
 
 Python will only run 1 if statement, if it runs into a pass it will exit without doing anything
 
+import turtle
+turtle.setup(500, 500, 100, 0)
+
+turtle.forward(100)
+turtle.right(180)
+turtle.forward(50)
+
+turtle.end_fill()
+turtle.done()
+
+#loops
+
+for i in range(10):
+    print(i)
+
+for i in range(2,6) (four numbers: 2,3,4,5)
+    print(i)
+
+for i in range(1,5,2) (1,3)
+    print(i)
+
+total = 0
+incremental = 0 
+for i in range(6):
+    total += i
+    incremental += 1
+
+print(total)
+print(incremental)
+
+p_color = (0/255, 153/255, 204/255)
+
+for i in range (6)
+    turtle.forward(100)
+    turtle.right(360/6)
+
+turtle.end_fill()
+turtle.done()
+
+turtle.goto(20,20)
+turtle.penup()
+turtle.pendown()
+
+turtle.pencolor(p_color)
+
+use html color picker
+
+making functions
+
+def greet_twice():
+    print("Hello")
+    print("Hello")
+
+greet_twice()
+
+arguments: the input
+
+def draw_rect(f_color)
+    turtle.fillcolor(f_color)
+
+draw_rect("blue")
+(input goes in the parentheses)
+
+
+turtle.setup(1000, 500)
+
+p_color = (0/255, 153/255, 204/255)
+turtle.pencolor(p_color)
+turtle.fillcolor(p_color)
+
+for i in range(6)
+    turtle.forward(100)
+    turtle.right(360/4)
+turtle.end_fill
+
+turtle.done
+
