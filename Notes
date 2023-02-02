@@ -448,3 +448,91 @@ turtle.end_fill
 
 turtle.done
 
+for i in range(5):
+    print("Hello")
+
+for i in range(5):
+    print("Loop #" + str(i))
+
+
+for i in range(10,0,-1):
+    print("Loop #" + str(i)) 
+
+loops
+turtles
+
+import turtle
+
+t = turtle.Turtle()
+
+
+# All of your turtle commands
+# go in this space here.
+
+
+
+t.forward(n)
+t.backward()
+t.rt(d)
+t.lt(d)
+
+turtle.mainloop() #ends turtle 
+
+ for i in range(360):
+...     t.forward(1)
+...     t.rt(1)
+...
+>>> for i in range(360):
+...     t.forward(.5)
+...     t.rt(1)
+...
+>>> for i in range(180):
+...     t.forward(1)
+...     t.rt(2)
+...
+>>> 115 takes us to the top of the base circle
+
+
+ def shortside():
+  File "<stdin>", line 5
+    def shortside():
+    ^^^
+SyntaxError: invalid syntax
+>>>
+>>> def shortside():
+...     for i in range(90):
+...             t.forward(1/squish_factor)
+...             t.rt(1)
+...
+>>> longside()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'longside' is not defined
+>>> shortside()
+>>>
+>>> shortside()
+>>> shortside()
+>>> shortside()
+>>> def longside():
+...     for i in range(90):
+...             t.forward(squish_factor)
+...             t.rt(1)
+...
+>>> t.lt(90)
+>>> shortside()
+>>> longside()
+>>> shortside()
+>>> longside()
+>>>
+
+
+
+
+
+
+
+
+
+
+
+
