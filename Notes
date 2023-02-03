@@ -525,7 +525,114 @@ NameError: name 'longside' is not defined
 >>> longside()
 >>>
 
+def use_a_swear():
+  """Says a swear"""
+  print("bitch")
 
+help(use_a_swear)
+
+count = 0 # counting variable
+while count < 5:
+    print("Hello")
+    count = count + 1
+
+
+import random
+ 
+while True:
+    print("This is an infinite loop")
+    rand_num = random.randint(1, 101) # random integer between 1 and 100
+    if rand_num > 75:
+        print("The loop has ended")
+        break # stop the loop
+
+
+
+import turtle
+import random
+def draw_rect(f_color, length):
+    p_color = (0/255, 153/255, 204/255)
+    turtle.pencolor(p_color)
+    turtle.fillcolor(f_color)
+    turtle.begin_fill()
+    for i in range(4):
+        turtle.forward(length)
+        turtle.right(360/4)
+    turtle.end_fill()
+def move_toxy(x, y):
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
+def main():
+    turtle.setup(1000, 500)
+    turtle.bgcolor("gray")
+    turtle.speed(0)
+    # for i in range(5):
+    #     x_val = random.randint(-400, 400)
+    #     y_val = random.randint(-200, 200)
+    #     move_toxy(x_val, y_val)
+    #     fill_color = (random.randint(0, 255) / 255, random.randint(0, 255) / 255,
+random.randint(0, 255) / 255)
+    #     draw_rect(fill_color, random.randint(20, 100))
+    i = 0
+    while i<5:
+        x_val = random.randint(-400, 400)
+        y_val = random.randint(-200, 200)
+        move_toxy(x_val, y_val)
+        fill_color = (random.randint(0, 255) / 255, random.randint(0, 255) / 255, 
+random.randint(0, 255) / 255)
+        draw_rect(fill_color, random.randint(20, 100))
+        i = i + 1
+    # draw_rect("blue", 100)
+    # move_toxy(-100, 150)
+    # draw_rect("blue", 50)
+    turtle.done()
+if __name__ =="__main__":
+    main()
+    # turtle.circle(100, 180)
+    # turtle.done()import turtle
+import random
+def draw_rect(f_color, length):
+    p_color = (0/255, 153/255, 204/255)
+    turtle.pencolor(p_color)
+    turtle.fillcolor(f_color)
+    turtle.begin_fill()
+    for i in range(4):
+        turtle.forward(length)
+        turtle.right(360/4)
+    turtle.end_fill()
+def move_toxy(x, y):
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
+def main():
+    turtle.setup(1000, 500)
+    turtle.bgcolor("gray")
+    turtle.speed(0)
+    # for i in range(5):
+    #     x_val = random.randint(-400, 400)
+    #     y_val = random.randint(-200, 200)
+    #     move_toxy(x_val, y_val)
+    #     fill_color = (random.randint(0, 255) / 255, random.randint(0, 255) / 255,
+random.randint(0, 255) / 255)
+    #     draw_rect(fill_color, random.randint(20, 100))
+    i = 0
+    while i<5:
+        x_val = random.randint(-400, 400)
+        y_val = random.randint(-200, 200)
+        move_toxy(x_val, y_val)
+        fill_color = (random.randint(0, 255) / 255, random.randint(0, 255) / 255, 
+random.randint(0, 255) / 255)
+        draw_rect(fill_color, random.randint(20, 100))
+        i = i + 1
+    # draw_rect("blue", 100)
+    # move_toxy(-100, 150)
+    # draw_rect("blue", 50)
+    turtle.done()
+if __name__ =="__main__":
+    main()
+    # turtle.circle(100, 180)
+    # turtle.done()
 
 
 
