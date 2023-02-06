@@ -641,6 +641,17 @@ black doodles.py to format your code?
 idk bro
 #arguments go in the parentheses
 
+return function - sets values out of the function for what is set in the function
+
+return_string = welcome(Hope, 10)
+if there is no return the return value is none 
+
+def get_num():
+    number = int(input("Number: "))
+    return number
+
+print(get_number())
+variable_ = (get_num())
 
 
 
