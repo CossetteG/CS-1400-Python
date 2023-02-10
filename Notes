@@ -335,7 +335,7 @@ print("%s, up and %s" % (var1, var2))
 this way uses % to interpolate and s to type cast. it also works with i, f, but not b
 its the old way dont use it 
 
-select a chunk of code and do Ctrl # to comment it out- yet to test 
+select a chunk of code and do Ctrl / to comment it out
 
 snake casing is all lowercase letters and using _ as a space
 
@@ -773,3 +773,83 @@ for i in range(10):
     print(add_5(i * 5))
     
 print(f'The value of my_num is: {my_num}')
+
+the definition of the function is called the function header
+return lets an output leave the function 
+
+can you redefine funtions?
+you can import your personal library
+
+arguments are typically inputted positionally, but you can also pass them by declaring with the parameter name 
+keyword arguments 
+
+to make optional arguments, declare the variable in the function header for a default value 
+except can be declared as NameError, ZeroDivisionError 
+
+'tuple values:
+
+in the functionheader: (*var_name)
+
+in the call: (var1, var2, var2)
+
+will function as one variable 
+
+these are useful to unpack lists of variables into separated ones
+
+def get_info(*person):
+...     print(f"{person}, {type(person)}")
+...
+>>> print(__name__)
+__main__
+>>> if __name__ == "__main__":
+...     p1 = get_info("Hope",8)
+...     p2 = get_info("Rose", True)
+...     print(p1[1])
+('Hope', 8), <class 'tuple'>
+('Rose', True), <class 'tuple'>
+>>>
+
+the global keyword makes a parameter a global variable 
+
+to use an error message, use raise 
+
+    if w <= 0 or h <= 0:
+        raise ValueError("Width and height must be positive integers.")
+
+black doodles.py use to auto format your code
+
+list(value0, value1, value2)
+print(list[0])
+
+list_1 = ["red"]
+list_2 = list_1*3
+
+keyword none
+
+list_1 = [None]*10
+
+
+lists
+
+length = len(list)
+print(f"{list(len-1)}")
+
+list[1] = "new_value1"
+
+play around with lists- how to add to a list, how to print the entire list
+make password code 
+
+print(list + list2)
+#will print the two lists as one 
+
+print("value0" in list)
+
+slicing
+
+print(names[1:4])
+print(names[:4]) # will go from 0 - 4
+print(names[1:4:2])
+print[::-1] #prints the list in reverse order
+
+
+everything is an object, object- based coding. 
