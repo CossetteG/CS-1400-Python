@@ -853,3 +853,8 @@ print[::-1] #prints the list in reverse order
 
 
 everything is an object, object- based coding. 
+
+file_obj = open("myfile.txt", "w")
+to open a file and write into it 
+file_obj.writelines("The first line\n")
+file.obj.close()
