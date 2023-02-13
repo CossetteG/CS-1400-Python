@@ -31,8 +31,8 @@ def get_dimensions():
     return wid_, hei_
 
 
-# get_dimensions()
-# t = turtle.Turtle()
+#get_dimensions()
+#t = turtle.Turtle()
 
 
 def draw_circle(scale):
@@ -85,15 +85,16 @@ def draw_sun(scale, line_color, fill_color):
     t.pencolor(line_color)
     t.fillcolor(fill_color)
 
-    t.begin_fill()
+    # t.begin_fill()
 
-    t.setheading(0)
-    draw_circle(scale * 0.7)
+
+    t.begin_fill()
     t.setheading(60)
     for _ in range(360 // 10):
         draw_rays(scale)
-    # t.end_fill
-
+    t.end_fill()
+    t.setheading(0)
+    draw_circle(scale * 0.7)
 
 def move_ur_pen(x_dim, y_dim):
     """Moves pen without drawing"""
