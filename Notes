@@ -858,3 +858,47 @@ file_obj = open("myfile.txt", "w")
 to open a file and write into it 
 file_obj.writelines("The first line\n")
 file.obj.close()
+
+write a list of strings into a file
+
+colors = ["red\n", "yellow\n", "blue\n"]
+
+with open("myfile.csv","w") as f_obj:
+    f_obj.writelines("Month, Adults, babies, total\n")
+
+'w' overwrites the content of the file, overwiting if the file exists
+'a' appends(adds) to existing file content 
+'x' is like w, but fails if the file already exists 
+
+f.write method also works, but only for strings
+f.writelines works for everything
+
+print(2+5, file = f.obj)
+
+prints to your own file instead of the terminal
+
+file address: 
+"directory_name/filename.txt", "w"
+
+if you have your directory open, you can copy files into different locations using
+its address
+
+file = var_name 
+
+list_name.append(method)("Method Parameters")
+
+adding/appending things to lists 
+
+s_list = []
+s_list.append("item_1")
+len(s_list)
+
+the pop function will change the original list
+used to take things out of a list
+
+
+my_list = [1,2,3,4]
+
+for i in range(4):
+    print(my_list)
+    my_list.pop()
