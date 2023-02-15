@@ -1078,6 +1078,21 @@ my_list.remove(2)
 print(my_list)
 #final list is "red", 3- removes the specified value
 
+>>> print(my_list)
+['Will', 'Mike', 'Hope', 'Cathy']
+>>> my_list.append("Will")
+>>> print(my_list)
+['Will', 'Mike', 'Hope', 'Cathy', 'Will']
+>>> my_list.remove("Will")
+>>> print(my_list)
+['Mike', 'Hope', 'Cathy', 'Will']
+>>> my_list.remove("Will")
+>>> print(my_list)
+['Mike', 'Hope', 'Cathy']
+#if you have 2 of the same value, it will remove the first one
+
+
+
 count 
 my_var = 2
 my_list = [2, "red", 2.0, my_var, "Red", 8 // 4]
@@ -1095,6 +1110,7 @@ print(my_list)
 my_list.sort()
 print(my_list)
 #sorts the list smallest to biggest or alphabetical
+#all capital letters come before lowercase letters
 my_list.sort(reverse=True)
 print(my_list)
 #don't combine str and int
@@ -1105,3 +1121,16 @@ my_list = ["north", True, 45, 12, "red"]
 print(my_list)
 my_list.reverse()
 print(my_list)
+
+extend - like append, but for multiple values
+#append will add everything as one value
+userdb = ["Will","Mike"]
+my_list = userdb 
+my_list.extend(["Hope", "Cathy"])
+
+sorted
+sorted(my_list)
+returns what your list would look like sorted
+#dont mix int and str
+#does not change the original list
+
