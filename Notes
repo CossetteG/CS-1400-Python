@@ -1027,3 +1027,81 @@ with open rabbits.csv
 do some rabbit math
 run again?
 
+the sum function
+
+my_list = [1,2,3]
+total = sum(my_list)
+print(total)
+#this will print the sum of 1 2 3
+
+my_list = ["abc", "def", "ghi"]
+print(sum(my_list))
+#this will give you an error message. Dont sum strings
+
+the min function (the max function works the same way)
+
+my_list = [45, 12, 9, 1]
+smallest = min(my_list)
+print(smallest) 
+
+my_list = ["apple", "boy", "cat", "aaron"]
+smallest = min(my_list)
+print(smallest)
+#for strings, the min function returns the 1st in alphabetical order
+#but dont mix str and int
+
+
+append (add to list)
+my_list = [1, 2, 3]
+new_element = 4
+
+my_list.append(new_element)
+print(my_list)
+
+pop (remove from list)
+my_list = [1, 2, 3, 4]
+print(my_list)
+print(my_list.pop())
+print(my_list) 
+#if specified, will remove the certain index, otherwise just the last one
+#returns the removed value
+
+insert
+my_list = [1, 2, 3, 4]
+my_list.insert(2, "Hi")
+print(my_list)
+#inserts at a certain index
+
+remove
+my_list = [2, "red", 3]
+my_list.remove(2)
+print(my_list)
+#final list is "red", 3- removes the specified value
+
+count 
+my_var = 2
+my_list = [2, "red", 2.0, my_var, "Red", 8 // 4]
+print(my_list.count(2))
+
+index
+my_list = ["dog", True, 16, "house", 55.9, False, 16]
+index = my_list.index("house")
+print(index)
+#gets the index of a certain value
+
+sort 
+my_list = [23, 55, 11, 7, 82.9, -14, 0, 34]
+print(my_list)
+my_list.sort()
+print(my_list)
+#sorts the list smallest to biggest or alphabetical
+my_list.sort(reverse=True)
+print(my_list)
+#don't combine str and int
+
+reverse - different from reverse sort
+#just reverses the list
+my_list = ["north", True, 45, 12, "red"]
+print(my_list)
+my_list.reverse()
+print(my_list)
