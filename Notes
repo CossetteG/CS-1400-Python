@@ -991,5 +991,39 @@ with open("student_folder/text/practice3.txt", "a") as output_file:
 
 the with keyword opens a file and closes it again once the indented code is finished
 
+Writing into files: the hard way:
 
+import os
+
+file_object = open('preferences.txt', 'w')
+file_object.write(f"I'm writing stuff. {os.linesep}")
+file.object.close()
+
+the easy way: with
+
+import math
+
+with open('numbers.txt', 'w') as file_object:
+    user_input = input('Please enter a number ("done" to exit): ')
+    while user_input != 'done':
+        number = float(user_input)
+        print(f'The square root of {number} is {math.sqrt(number)}', file=file_object)
+        user_input = input('Please enter another number ("done" to exit): ')
+
+
+Rabbits outline
+
+uuh function (pretend everything is indendted lol)
+with open rabbits.csv
+    beginning text
+    while rabbits are less than cages
+        update rabbit numbers and month
+        list rabbit numbers and months
+        print rabbit numbers and cages to rabbits.csv
+    ^I'll probably put this stuff into a function actually
+    end text
+
+(main) get rabbit input/cage input (optional)
+do some rabbit math
+run again?
 
