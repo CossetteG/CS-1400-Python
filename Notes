@@ -1270,3 +1270,19 @@ for row in numbers:
   total += sum(row)
 print(total)
 
+for i in range(len(colors)):
+    print(f"{i} {colors[i]})
+
+for color in range(colors):
+    print(color)
+
+new_list = []
+for i in range(10):
+    new_list.append(i)
+print(new_list)
+
+print(list(range(10))) ^same , but generates instead of stores values
+
+list1 = [number for number in new_list]
+
+list2 = [2*number for number in range(10)]
