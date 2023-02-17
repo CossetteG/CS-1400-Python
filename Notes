@@ -1134,3 +1134,139 @@ returns what your list would look like sorted
 #dont mix int and str
 #does not change the original list
 
+list interation 
+
+numbers = [1, 2, 3, "hi"]
+for number in numbers:
+    print(number)
+prints every list item as a seperate line 
+more importantly, runs for every object in the list, no matter how long
+
+numbers = [1, 2, 3, 4]
+length = len(numbers)
+i = 0
+
+while i < length:
+    print(numbers[i])
+    i += 1
+same thing, but with a while loop
+
+2d lists, aka nesting lists
+my_2d_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print(my_2d_list)
+
+Readable 2d lists:
+
+populous_cities = [
+                    ["USA", "New York City", "Los Angeles", "Chicago"],
+                    ["France", "Paris", "Marseille", "Lyon"],
+                    ["China", "Shanghai", "Beijing", "Chongqing"],
+                    ["India", "Mumbai", "Delhi", "Bangalore"]
+                  ]
+print(populous_cities)
+
+print(populous_cities[0])
+usa_cities = populous_cities[0]
+print(usa_cities[0])
+or
+
+print(colors[1][2])
+to extract a certain value from the 2d list 
+
+adding 2d lists:
+list_1 = [[1, 2, 3], [4, 5, 6]]
+list_2 = [[7, 8, 9], [10, 11, 12]]
+
+print(list_1 + list_2)
+[[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
+also works with append
+
+my_list = [["a", "b", "c"], ["d", "e", "f"]]
+another_list = ["g", "h", "i"]
+my_list.append(another_list)
+print(my_list)
+
+mylist = [1, 3, 5]
+mylist +=[7, 9]
+print(mylist)
+that worked
+
+mylist -= mylist[0]
+mylist -= [1, 3]
+print(mylist)
+that did not work
+
+To use if statements with 2d lists, nest the if statements/loops
+mountains = [
+              ["Mount Everest", "K2", "Kangchenjunga"],
+              ["Denali", "Mount Logan", "Pico de Orizaba"],
+              ["Mount Kilimanjaro", "Mount Kenya", "Mount Ngaliema"]
+            ]
+
+for row in range(3):
+  for column in range(3):
+    if len(mountains[row][column]) <= 6:
+      print(mountains[row][column])
+
+import random
+
+numbers = [[random.randint(1, 101) for columns in range(10)] for rows in range(10)]
+print(numbers)
+
+number is a 2d list with 10 rows & 10 columns that are all populated with 
+random numbers from 1 to 100
+
+symbols = [["*" for columns in range(5)] for rows in range(7)]
+print(symbols)
+this one's better cuz it doesn't have the random
+
+how to print 2d lists without extra brackets:
+import random
+
+numbers = [[random.randint(1, 101) for columns in range(5)] for rows in range(5)]
+for row in numbers:
+  for number in row:
+    print(f"{number} ", end="")
+  print()
+
+sorting 2d lists
+numbers = [
+            [6, 7, 10, 9, 8],
+            [12, 13, 14, 11, 15],
+            [20, 18, 17, 19, 16],
+            [1, 2, 3, 4, 5]
+          ]
+numbers.sort()
+# loop to print the 2D list
+for row in numbers:
+  print(row)
+This will sort the rows but not within them
+
+numbers = [
+            [6, 7, 10, 9, 8],
+            [12, 13, 14, 11, 15],
+            [20, 18, 17, 19, 16],
+            [1, 2, 3, 4, 5]
+          ]
+numbers.sort()
+# loop to sort and print the 2D list
+for row in numbers:
+  row.sort()
+  print(row)
+Will sort columns as well, but will not swap elements from one row to another
+
+
+addition in a 2d list
+numbers = [
+            [6, 7, 10, 9, 8],
+            [12, 13, 14, 11, 15],
+            [20, 18, 17, 19, 16],
+            [1, 2, 3, 4, 5]
+          ]
+total = 0
+
+# loop to add the sum of each inner list to total
+for row in numbers:
+  total += sum(row)
+print(total)
+
