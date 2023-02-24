@@ -1292,3 +1292,129 @@ print lists without brackets
 >> print(*my_list, sep=", ")
 1, 2, 3
 >>>
+
+
+printing to a file from input
+with open("student_folder/csv/superheroes.csv", "w") as output_file:
+    writer = csv.writer(output_file, lineterminator="\n")
+    print("Enter 'stop' to quit the program")
+    while True:
+        name = input("Enter the superhero's name: ")
+        power = input("Enter their superpower: ")
+        if name == "stop" or power == "stop":
+            break
+        writer.writerow([name, power])    
+
+delimiters are what separates things in a read file
+
+I lost some notes :(
+
+reading from a file: 
+
+Reading a file that does not exist will cause an error. Writing or appending a file that does not exist will cause the creation of this file.
+
+with open("my_file.txt", "r") as read_file:
+    for line in read_file.readlines():
+        print(line)
+
+The readlines method reads all of the text file and returns all of the strings in a list.
+The readline method reads one string at a time.
+
+
+The variable that represents the text file is named my_file and the method 
+to find a specific character is seek. You are looking for the 35th character, 
+and the seek method starts with index 0. So the 35th character would be index 34.
+my_file.seek(34)
+
+with open("source.txt", "r") as source, open("dest.txt", "w") as dest:
+    for line in source.readlines():
+        dest.write(line)
+
+with open("story.txt", "r") as input_file:
+  lines = input_file.readlines()
+  for line in lines:
+    print(line, end='')
+
+
+with open("my_file.txt", "r") as input_file:
+    line = input_file.readline()
+    while line != "":
+        print(line)
+        line = input_file.readline()
+
+back to our regularly scheduled programming
+
+grabbing an index from a string
+   char_index = SYMBOLS.find(char)
+
+encryption and decryption: 
+with open("student_folder/text/encrypted.txt", "r") as source, open("student_folder/text/decrypted.txt", "w") as destination:   
+    key = 13
+    mode = "decrypt"
+    SYMBOLS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?.-;"
+    new_text = ""
+
+    line = source.readline()
+    while line != "":
+        for char in line:
+          if char in SYMBOLS:
+            char_index = SYMBOLS.find(char)
+
+            if mode == "encrypt":
+              new_index = char_index + key
+            elif mode == "decrypt":
+              new_index = char_index - key
+
+            if new_index >= len(SYMBOLS):
+              new_index -= len(SYMBOLS)
+            elif new_index < 0:
+              new_index += len(SYMBOLS)
+          new_text += SYMBOLS[new_index]
+        destination.write(new_text)
+        line = source.readline()
+        break
+indentation is VERY IMPORTANT 
+
+
+with open("student_folder/text/encrypted.txt", "r") as source, open("student_folder/text/decrypted.txt", "w") as destination:   
+    key = 13
+    mode = "decrypt"
+    SYMBOLS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?.-;"
+    new_text = ""
+
+    line = source.readline()
+    while line != "":
+        for char in line:
+          if char in SYMBOLS:
+            char_index = SYMBOLS.find(char)
+
+            if mode == "encrypt":
+              new_index = char_index + key
+            elif mode == "decrypt":
+              new_index = char_index - key
+
+            if new_index >= len(SYMBOLS):
+              new_index -= len(SYMBOLS)
+            elif new_index < 0:
+              new_index += len(SYMBOLS)
+          new_text += SYMBOLS[new_index]
+        destination.write(new_text)
+        line = source.readline()
+        break
+
+
+WORKING ON
+with open("student_folder/.labs/myanmar.txt", "r") as source, open("student_folder/text/new_myanamar.txt", "w") as dest:
+  line = source.readline()
+  old_text = []
+  new_text = ""
+  
+  while line != "":
+    if "Burma" in line:
+      spot = line.find("Burma")
+      for char in line:
+        old_text.append(char)
+        new_text +=
+      dest.write(str(old_text))
+    line = source.readline()
+
