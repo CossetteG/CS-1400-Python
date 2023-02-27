@@ -1621,3 +1621,42 @@ with open(test_file, "r",) as source:
 
 print("The following cities are in the Southern Hemisphere: ", end='')
 print(*cities, sep=", ", end=".")
+
+
+Strings in files
+
+to put all of a file's contents in one string, separated with \n, 
+use the read() method
+lines = file_object.read()
+
+to put each line as a separate item in a list, use the readlines() method
+lines = file_object.read()
+
+or you can use a for loop to append them one at a time, and also 
+use the strip() method to get rid of extra stuff
+lines = []
+with open(yknow)
+    for line in file_object:
+        lines.append(line.strip())
+
+or, more consisely,
+lines = [line.strip() for line in file_object]
+
+with open('coconuts.txt', 'r') as file_object:
+    words = file_object.read().split()
+will take the entire document and divide it by word
+
+import os
+
+with open('coconuts.txt', 'r') as file_object:
+    lines = file_object.read().strip().split(os.linesep)
+will split the document by line 
+
+with open('values.csv', 'r') as file_object:
+    rows = [row.split(',') for row in file_object]
+gets a 2d list from a csv file, but it's messy
+
+with open('values.csv', 'r') as file_object:
+    rows = [[int(value.strip()) for value in row.split(',')] for row in file_object]
+same thing, but cleaner
+
