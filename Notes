@@ -1660,3 +1660,32 @@ with open('values.csv', 'r') as file_object:
     rows = [[int(value.strip()) for value in row.split(',')] for row in file_object]
 same thing, but cleaner
 
+unpacking a list:
+list_a = ["Hope", "January 2nd", 26]
+name, birthday, age = list_a 
+
+list_b =["Don", 36, 51, 79]
+name, *scores = list_b 
+
+when you readline() for lines that you don't have, it returns an empty string
+
+while line != "":
+    line = f_obj.readline()
+    new_list = line.split()
+    print(new_list)
+
+for line in f_obj:
+    print(line)
+
+print(list("Hello"))
+#[H,e,l,l,o]
+
+print(list(f_obj))
+will print the entire file as a list divided by lines
+
+you can only access each element in a read file 1x, so set new variables
+if you need them more than once
+
+new_list = [ float(score) for score in scores]
+typecasting a whole list
+sum(list)
