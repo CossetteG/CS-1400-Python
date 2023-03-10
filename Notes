@@ -1689,3 +1689,135 @@ if you need them more than once
 new_list = [ float(score) for score in scores]
 typecasting a whole list
 sum(list)
+
+
+
+import math
+
+def radius(x1, y1, x2, y2):
+    """Distance formula to determine the radius of a circle"""
+    return(math.sqrt((x2 - x1)**2 + (y2 - y1)**2))
+  
+def area(x1, y1, x2, y2):
+    """Area of a circle function"""
+    return(math.pi * radius(x1, y1, x2, y2)**2)
+
+print(area(0, 0, 4, 4))
+
+print(radius(0,0,4,4)**2*math.pi)
+
+Here we have two functions that use the same parameters, one to find
+the radius of a circle and one to find an area, based on two coordinates
+center of circle and a point on the edge
+
+import math
+  
+def area(x1, y1, x2, y2):
+    """Area of a circle function"""
+    def radius(x1, y1, x2, y2):
+        """Distance formula to determine the radius of a circle"""
+        return math.sqrt(math.pow(x2 - x1, 2) + math.pow(y2 - y1, 2))
+    
+    return(math.pi * math.pow(radius(x1, y1, x2, y2), 2))
+  
+print(area(0, 0, 4, 4))
+
+Same thing, but with a one function nested inside the other. 
+
+you could also write area(radius(0,0,4,4)) but with the one under here
+radius() is a helper function because its used as a calc in anther function
+
+import math
+
+def area(r):
+    """Area of a circle"""
+    return(math.pi * math.pow(r, 2))
+
+def radius(x1, y1, x2, y2):
+    """Distance formula to calculate the radius"""
+    return(math.sqrt(math.pow(x2 - x1, 2) + math.pow(y2 - y1, 2)))
+
+print(area(radius(0, 0, 4, 4)))
+
+helper functions will only be used in user-defined functions
+
+def force(dv, time, mass):
+    """Calculate force"""
+    def acceleration(dv, time):
+        """Calculate acceleration"""
+        return(dv / time)
+    return(mass * acceleration(dv, time))
+
+Internal Helper function, with math you know 
+
+Variable Scope
+local variables- can only be seen within their function
+global variable- public/ can be seen by anywhere 
+
+two local variables:
+def function_1():
+    my_var = "Hello"
+    print(my_var)
+    
+def function_2():
+    my_var = "Bonjour"
+    print(my_var)
+    
+function_1()
+function_2()
+
+global variable:
+greeting = "Hello"
+
+def say_hello():
+    """Print a greeting"""
+    print(greeting)
+
+say_hello()
+
+greeting = "howdy"
+
+def say_hello():
+    """Demonstrate how to use the global keyword"""
+    global greeting
+    greeting = "Bonjour"
+    print(greeting)
+
+say_hello()
+print(greeting)
+
+this prints bonjour twice 
+
+greeting = "howdy"
+
+def say_hello():
+    """Demonstrate how to use the global keyword"""
+    # global greeting
+    greeting = "Bonjour"
+    print(greeting)
+
+say_hello()
+print(greeting)
+
+this prints bonjour then howdy
+
+if both local and global are the same variable, local takes precedence
+
+my_var = "global scope"
+
+def print_scope():
+    """Demonstrate local scope vs global scope"""
+    my_var = "local scope"
+    print(my_var)
+
+print_scope()
+print(my_var)
+
+When you have a local and global variable with the same name 
+and there is no global keyword, the local
+scope variable takes precedence.
+When you have a local and global variable with the same name 
+and the global keyword is being used, the global
+scope variable takes precedence.
+
+
