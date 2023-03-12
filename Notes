@@ -1820,4 +1820,116 @@ When you have a local and global variable with the same name
 and the global keyword is being used, the global
 scope variable takes precedence.
 
+import csv
 
+movie_csv = "student_folder/.labs/movie_data.csv"
+
+def fetch_movie_data(movie_csv):
+    """Return movie data from a CSV file"""
+    with open(movie_csv, "r") as movie_file:
+      reader = csv.reader(movie_file)
+      movie_info = []
+      for row in reader:
+        movie_info.append(row)
+      return movie_info
+
+def print_movie_data(data):
+  '''print the movie data legibly'''
+  for title, genre, tomato, gross, year in data:
+    print("{:5} {}     {}   ${}   {}".format(title, genre, tomato, gross, year))
+
+
+movie_data = fetch_movie_data(movie_csv) 
+print_movie_data(movie_data)
+
+import csv, operator
+
+movie_csv = "student_folder/.labs/movie_data.csv"
+
+def fetch_movie_data(movie_csv):
+    """Return movie data from a CSV file"""
+    with open(movie_csv, "r") as movie_file:
+      reader = csv.reader(movie_file)
+      movie_info = []
+      for row in reader:
+        movie_info.append(row)
+      return movie_info
+
+def print_movie_data(data):
+  '''print the movie data legibly'''
+  for title, genre, tomato, gross, year in data:
+    print("{:5} {}     {}   ${}   {}".format(title, genre, tomato, gross, year))
+
+def sort_movie_data(data, index):
+  """ sort the data based on an index""" 
+  header = data[0]
+  sorted_movies = data[1:]
+  if index == 3:
+    sorted_movies.sort(key=get_money)
+  else:
+    sorted_movies.sort(key=operator.itemgetter(index))
+  sorted_movies.insert(0, header)
+  return sorted_movies
+
+def get_money(gross):
+  return float(gross[3])
+
+
+movie_data = fetch_movie_data(movie_csv) 
+print_movie_data(sort_movie_data(movie_data, 3))
+
+sorting by a specific parameter using operator.itemgetter(parameter)
+
+
+import csv, operator
+
+movie_csv = "student_folder/.labs/movie_data.csv"
+
+def fetch_movie_data(movie_csv):
+    """Return movie data from a CSV file"""
+    with open(movie_csv, "r") as movie_file:
+      reader = csv.reader(movie_file)
+      movie_info = []
+      for row in reader:
+        movie_info.append(row)
+      return movie_info
+
+def print_movie_data(data):
+  '''print the movie data legibly'''
+  for title, genre, tomato, gross, year in data:
+    print("{:5} {}     {}   ${}   {}".format(title, genre, tomato, gross, year))
+
+def sort_movie_data(data, index, descending):
+  """ sort the data based on an index""" 
+  header = data[0]
+  sorted_movies = data[1:]
+
+  if index == 3:
+    sorted_movies.sort(key=get_money)
+  else:
+    sorted_movies.sort(key=operator.itemgetter(index))
+  
+  if descending:
+    sorted_movies.reverse()
+  
+  sorted_movies.insert(0, header)
+  return sorted_movies
+
+def get_money(gross):
+  return float(gross[3])
+
+
+movie_data = fetch_movie_data(movie_csv) 
+print_movie_data(sort_movie_data(movie_data, 0, True))
+
+added descending 
+
+
+def to_upper(text):
+  try:
+    new_string = text.upper()
+    return new_string
+  except ValueError:
+    print("Please input a string")
+
+    
