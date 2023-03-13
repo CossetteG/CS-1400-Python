@@ -151,6 +151,16 @@ calculate bools in order of not, and, then or
 
 #Short Circuting- if Python knows something will be true before finishing, it wont finish 
 
+Error Codes:
+ValueError
+TypeError
+SyntaxError
+IndexError
+NameError
+ZeroDivisionError
+
+
+
 >>> print("hi"bob")
   File "<stdin>", line 1
     print("hi"bob")
