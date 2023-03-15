@@ -1942,4 +1942,117 @@ def to_upper(text):
   except ValueError:
     print("Please input a string")
 
-    
+
+Tuples !
+tuples are immutable lists, defined by ()
+numbers = (1, 2, 3, 4)
+
+empty_tuple = ()
+print(empty_tuple)
+
+We can also create tuples which contain only one element (the comma following the element is necessary):
+
+number = (1, )
+print(number)
+
+indexing tuples
+words = ('peanut', 'car', 'friend', 'eat', 'movie', 'box')
+
+print("Original Tuple:", words)
+print("Index Value 4 in Tuple called 'words':", words[4])
+print("Index Value -2 in Tuple called 'words':", words[-2])
+
+sports = ('Softball', 'Football', 'Volleyball', 'Basketball')
+print("Slicing Tuple 'sports' to retrieve the elements at Index Values 1 and 2:", sports[1:3])
+print("Slicing Tuple 'sports' to retrieve the elements at Index Values 1 and 2", sports[1:-1])
+
+packing and unpacking tuples:
+
+#packing tuples:
+var1 = 2
+var2 = 3
+var3= 4
+
+tuple1 = (var1, var2, var3, 5, 6, 7)
+print(tuple1)
+
+tuple2 = ("yeet ", "yoink")
+
+#unpacking tuples
+
+yin, yang = tuple2
+print(yin + yang)
+
+var4 = tuple1[3]
+var5 = tuple1[4]
+print(var5)
+
+unpacking function:
+jada_grades = ("Jada", "A", "B+")
+
+def student_grades_by_line(tuple_name):
+  (student_name, math_grade, history_grade) = tuple_name
+  print("Student's Name:", student_name,
+  "\nStudent's Math Grade:", math_grade,
+  "\nStudent's History Grade:", history_grade)
+  return("")
+
+print(student_grades_by_line(jada_grades))
+
+tuples are very strict about how many elements you have in them
+
+def unpacker(tuple_name):
+  for i in tuple_name:
+    print(i)
+
+also returns all the values in a tuple, but has an extra None value
+
+
+deleting delete anything, including tuples:
+
+xyz = ("x", "y", "z")
+print("Before Deleting Tuple:", xyz)
+
+del(xyz)
+print("After Deleting Tuple:")
+# print(xyz)
+
+x = 3
+
+print(x)
+
+del(x)
+# print(x)
+just unalives it
+
+delete things within immutable objects by redefining it as a slice of itself
+
+alphabet = ('t', 'u', 'v', 'w', 'x', 'y', 'z', 'x', 'y', 'z')
+print("Original Elements in 'alphabet':", alphabet)
+
+alphabet = alphabet[:7]
+print("Corrected Elements in 'alphabet':", alphabet)
+
+tuples can be added with + 
+colors = ('red', 'orange', 'kangaroo', 'yellow', 'green', 'blue', 'purple', 'pink')
+colors = (colors[0:2] + colors[3:8])
+print(colors)
+
+tuples can be zooted into lists, and vice versa
+fabrics = ('denim', 'satin')
+fabrics_list = list(fabrics)
+print("Fabrics Tuple:", fabrics, "\nFabrics List:", fabrics_list)
+
+fabrics = tuple(fabrics_list)
+print(fabrics)
+
+and with that use all our list functions
+
+
+Tuples	Lists	Sets	Dictionaries
+immutable	mutable	mutable	mutable
+ordered	ordered	unordered	unordered
+allows duplicate element values	allows duplicate element values	does not allow duplicate element values	does not allow duplicate keys
+represents a collection of ordered elements	represents a collection of ordered elements	represents a collection of elements	represents a collection of keys and their corresponding values
+(element1, element2, …)	[element1, element2, …]	{element3, element1, element2, …}	{key1 : value1, key2 : value2, …}
+
