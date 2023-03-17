@@ -2056,3 +2056,38 @@ allows duplicate element values	allows duplicate element values	does not allow d
 represents a collection of ordered elements	represents a collection of ordered elements	represents a collection of elements	represents a collection of keys and their corresponding values
 (element1, element2, …)	[element1, element2, …]	{element3, element1, element2, …}	{key1 : value1, key2 : value2, …}
 
+Dictionaries:
+
+dictionary_var = {key1: value1, key2: value2, key3: value3}
+dictionaries are mutable, unordered, and doesn't allow duplicates
+
+>>> numbers = [1, 2, 3, 4, 5]
+>>> number_dic = {number: number**2 for number in numbers}
+>>> print(number_dic)
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+>>>
+>>> num_dic = {number:number**2 for number in numbers if number%2 == 0}
+>>> print(num_dic)
+{2: 4, 4: 16}
+>>>
+
+>>> for item in number_dic:
+...     print(item)
+...
+1
+2
+3
+4
+5
+>>>
+>>> print(number_dic[1])
+1
+>>> the index for dictionaries starts at 1
+
+list1 = ["UofU", "UVU", "BYU"]
+list2 = ["SLC", "Orem", "Provo"]
+
+print(list(zip(list1, list2)))
+
+for school, city in zip(list1,list2)
+    data_dict[school] = city
