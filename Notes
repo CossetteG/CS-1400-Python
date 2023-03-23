@@ -2090,4 +2090,175 @@ list2 = ["SLC", "Orem", "Provo"]
 print(list(zip(list1, list2)))
 
 for school, city in zip(list1,list2)
-    data_dict[school] = city
+    data_dict[school] = 
+    
+Nested dictionaries 
+actor = {
+  'first_name' : 'Denzel',
+  'last_name' : 'Washington',
+  'films' : {
+    'Malcolm X' : 1992,
+    'The Hurricane' : 1999,
+    'Training Day' : 2001,
+    'Fences' : 2016
+  }
+}
+
+print(actor)
+
+actor = {
+  'first_name' : 'Denzel',
+  'last_name' : 'Washington',
+  'films' : [
+    ('Malcolm X', 1992),
+    ('The Hurricane',  1999),
+    ('Training Day', 2001),
+    ('Fences', 2016)
+  ],
+  'oscars' : [{
+    'award' : 'Best actor in a supporting role',
+    'film' : 'Glory',
+    'year' : 1990
+  }, {
+    'award' : 'Best actor in a leading role',
+    'film' : 'Training Day',
+    'year' : 2002
+  }]
+}
+
+print(actor)
+
+import pprint
+pprint.pprint(actor)
+pprint.pprint(actor, width=40)
+
+prints legibly^
+
+movie = actor['films'][0][0]
+pprint.pprint(movie) 
+accessing things in nested dictionary 
+movie = actor['oscars'][0]['film']
+
+pprint.pprint(actor.items())
+pprint.pprint(list(actor.items())) 
+
+import pprint
+import copy
+
+actor = {
+  'first_name' : 'Denzel',
+  'last_name' : 'Washington',
+  'films' : [
+    ('Malcolm X', 1992),
+    ('The Hurricane',  1999),
+    ('Training Day', 2001),
+    ('Fences', 2016)
+  ],
+  'oscars' : [{
+    'award' : 'Best actor in a supporting role',
+    'film' : 'Glory',
+    'year' : 1990
+  }, {
+    'award' : 'Best actor in a leading role',
+    'film' : 'Training Day',
+    'year' : 2002
+  }]
+}
+
+actor_copy = copy.copy(actor)
+actor_copy['films'][3] = ('Remember the Titans', 2000)
+#shallow copy. nested var doesnt change
+
+actor_copy = copy.deepcopy(actor)
+actor_copy['films'][3] = ('Remember the Titans', 2000)
+#deep copy. everything changes
+
+# print('Original Dictionary')
+# print('-------------------')
+# pprint.pprint(actor, width=40)
+
+# print('\nCopied Dictionary')
+# print('-----------------')
+# pprint.pprint(actor_copy, width=40)
+
+print(f'Actor: {id(actor)}')
+print(f' Copy: {id(actor_copy)}')
+
+print(f'Actor: {id(actor["films"])}')
+print(f' Copy: {id(actor_copy["films"])}')
+#printing the memory address of the data or location 
+
+// 20220411141008
+// https://musicbrainz.org/ws/2/artist/5b11f4ce-a62d-471e-81fc-a69a8278c7da?fmt=json
+
+{
+  "end_area": null,
+  "name": "Nirvana",
+  "gender-id": null,
+  "ipis": [
+    
+  ],
+  "end-area": null,
+  "begin_area": {
+    "type-id": null,
+    "sort-name": "Aberdeen",
+    "name": "Aberdeen",
+    "id": "a640b45c-c173-49b1-8030-973603e895b5",
+    "disambiguation": "",
+    "type": null
+  },
+  "life-span": {
+    "ended": true,
+    "end": "1994-04-05",
+    "begin": "1988-01"
+  },
+  "disambiguation": "90s US grunge band",
+  "id": "5b11f4ce-a62d-471e-81fc-a69a8278c7da",
+  "isnis": [
+    "0000000123486830",
+    "0000000123487390"
+  ],
+  "begin-area": {
+    "type-id": null,
+    "sort-name": "Aberdeen",
+    "name": "Aberdeen",
+    "id": "a640b45c-c173-49b1-8030-973603e895b5",
+    "disambiguation": "",
+    "type": null
+  },
+  "sort-name": "Nirvana",
+  "gender": null,
+  "type": "Group",
+  "area": {
+    "sort-name": "United States",
+    "name": "United States",
+    "disambiguation": "",
+    "iso-3166-1-codes": [
+      "US"
+    ],
+    "id": "489ce91b-6658-3307-9877-795b68554c98",
+    "type-id": null,
+    "type": null
+  },
+  "country": "US",
+  "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b"
+}
+the json file
+JavaScript Object Notation 
+
+import json
+
+with open('data/music.json') as music_json:
+  music_data = json.load(music_json)
+
+print(type(music_data))
+jsons can translate to dictionaries 
+
+import json
+
+with open('data/music.json') as music_json:
+  music_data = json.load(music_json)
+
+print(json.dumps(music_data, indent=1))
+
+reading json file 
